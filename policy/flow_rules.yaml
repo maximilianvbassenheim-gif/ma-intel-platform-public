@@ -1,0 +1,24 @@
+version: 1
+description: "Enforceable Data Flow Rules for MA Intel Platform"
+
+rules:
+  - from: RESTRICTED
+    to: [CONFIDENTIAL, INTERNAL, PUBLIC]
+    allowed: false
+    reason: "Restricted data must never leave the local zero-cloud perimeter."
+
+  - from: CONFIDENTIAL
+    to: [INTERNAL, PUBLIC]
+    allowed: false
+    reason: "Confidential models & notes require explicit redaction before export."
+
+  - from: INTERNAL
+    to: [PUBLIC]
+    allowed: false
+    requires_approval: true
+    reason: "Internal frameworks require automated secret and compliance scanning."
+
+  - from: PUBLIC
+    to: [INTERNAL, CONFIDENTIAL, RESTRICTED]
+    allowed: true
+    reason: "Open ingestion allowed with provenance hashing."

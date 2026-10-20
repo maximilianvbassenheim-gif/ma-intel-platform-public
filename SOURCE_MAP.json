@@ -1,0 +1,15 @@
+{
+    "platform":  "ma-intel-platform",
+    "owner":  "maximilianvbassenheim-gif",
+    "created_at":  "2026-08-14T02:40:00Z",
+    "data_classification_policy":  {
+                                       "public":  "Open-source tools, documentation, generic scripts (GitHub allowed)",
+                                       "internal":  "Framework logic, orchestrators, dev configs (Codespaces allowed)",
+                                       "confidential":  "M\u0026A Intelligence models, client strategies (Encrypted/Hybrid)",
+                                       "restricted":  "Sensitive deal-room data, raw financial records (Zero-Cloud / Local SQLite only)"
+                                   },
+    "sources":  [
+
+                ],
+    "sources_note":  "Interne Quell-Repositories sind in dieser oeffentlichen Fassung nicht enthalten."
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "shaka-core",
+    "title": "SHAKA Core Copilot Engine",
+    "category": "Framework",
+    "stars": 45,
+    "forks": 12,
+    "views": 350,
+    "downloads": 85,
+    "last_activity_date": "2026-08-14T01:00:00Z"
+  },
+  {
+    "id": "ruflo-cockpit",
+    "title": "RUFLO Cockpit Multi-Agent Orchestrator",
+    "category": "UI",
+    "stars": 60,
+    "forks": 20,
+    "views": 620,
+    "downloads": 140,
+    "last_activity_date": "2026-08-13T20:00:00Z"
+  },
+  {
+    "id": "ma-intel-platform",
+    "title": "M&A Intelligence & Provenance Platform",
+    "category": "Enterprise",
+    "stars": 38,
+    "forks": 8,
+    "views": 290,
+    "downloads": 70,
+    "last_activity_date": "2026-08-14T02:00:00Z"
+  },
+  {
+    "id": "legacy-archiver",
+    "title": "Legacy Backup Script v0.1",
+    "category": "Utility",
+    "stars": 2,
+    "forks": 0,
+    "views": 15,
+    "downloads": 1,
+    "last_activity_date": "2025-05-10T12:00:00Z"
+  }
+]

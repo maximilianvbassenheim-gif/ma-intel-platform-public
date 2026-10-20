@@ -1,0 +1,33 @@
+name: Popularity Filter Daily Report
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  filter-and-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Popularity Filter
+        run: python scripts/compute_popularity.py
+
+      - name: Run Tests
+        run: |
+          pip install pytest
+          pytest tests/
+
+      - name: Commit & Push Daily Report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore(report): update daily popular items [skip ci]"
+          git push origin main

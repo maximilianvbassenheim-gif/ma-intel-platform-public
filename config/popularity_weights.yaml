@@ -1,0 +1,21 @@
+version: 1
+threshold: 70
+
+weights:
+  stars:
+    max_points: 30
+    scale_factor: 1.0
+  forks:
+    max_points: 15
+    scale_factor: 1.5
+  recent_activity:
+    max_points: 25
+    lookback_days: 14
+  engagement:
+    max_points: 20
+    scale_factor: 0.5
+
+penalties:
+  stale:
+    days_threshold: 90
+    penalty_points: 20

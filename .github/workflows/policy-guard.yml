@@ -1,0 +1,24 @@
+name: Policy & Provenance Guard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Provenance Verification
+        run: python scripts/verify_provenance.py
+
+      - name: Run Forensic Hash Validator
+        run: python verification/hash_validator.py
