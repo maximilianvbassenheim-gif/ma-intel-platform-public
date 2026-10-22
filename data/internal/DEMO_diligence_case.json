@@ -1,0 +1,129 @@
+{
+  "case_id": "DEMO-ASTERION-001",
+  "company": "Asterion Gridworks",
+  "notice": "Entirely fictional demo case. No real company, transaction, customer, or diligence finding is represented.",
+  "criteria": [
+    {
+      "id": "market_position",
+      "name": "Market position",
+      "weight": 30,
+      "evidence": [
+        {
+          "id": "MKT-01",
+          "source": "Synthetic market landscape memo",
+          "source_type": "fictional analyst memo",
+          "observed_at": "2026-09-18T12:00:00Z",
+          "confidence": 0.65,
+          "stance": "supports",
+          "score": 72,
+          "finding": "The fictional company is described as a recognized specialist in its regional segment."
+        },
+        {
+          "id": "MKT-02",
+          "source": "Synthetic procurement interview summary",
+          "source_type": "fictional interview summary",
+          "observed_at": "2026-09-20T09:30:00Z",
+          "confidence": 0.4,
+          "stance": "concerns",
+          "score": 38,
+          "finding": "The fictional summary notes limited awareness outside the company's home region."
+        }
+      ],
+      "open_questions": [
+        "How durable is the company's position outside its home region?",
+        "Can the claimed market share be independently corroborated?"
+      ]
+    },
+    {
+      "id": "product_maturity",
+      "name": "Product maturity",
+      "weight": 25,
+      "evidence": [
+        {
+          "id": "PRD-01",
+          "source": "Synthetic product release register",
+          "source_type": "fictional internal register",
+          "observed_at": "2026-09-16T15:00:00Z",
+          "confidence": 0.8,
+          "stance": "supports",
+          "score": 78,
+          "finding": "The fictional register describes a maintained product with regular releases."
+        },
+        {
+          "id": "PRD-02",
+          "source": "Synthetic quality review",
+          "source_type": "fictional quality review",
+          "observed_at": "2026-09-21T11:00:00Z",
+          "confidence": 0.55,
+          "stance": "concerns",
+          "score": 48,
+          "finding": "The fictional review flags incomplete regression coverage for one module."
+        }
+      ],
+      "open_questions": [
+        "What portion of the product roadmap depends on a single engineering lead?"
+      ]
+    },
+    {
+      "id": "dependency_resilience",
+      "name": "Dependency resilience",
+      "weight": 20,
+      "evidence": [
+        {
+          "id": "DEP-01",
+          "source": "Synthetic software dependency inventory",
+          "source_type": "fictional technical inventory",
+          "observed_at": "2026-09-19T08:15:00Z",
+          "confidence": 0.7,
+          "stance": "supports",
+          "score": 64,
+          "finding": "The fictional inventory identifies documented alternatives for most critical services."
+        },
+        {
+          "id": "DEP-02",
+          "source": "Synthetic vendor continuity note",
+          "source_type": "fictional vendor note",
+          "observed_at": "2026-09-22T10:45:00Z",
+          "confidence": 0.6,
+          "stance": "concerns",
+          "score": 35,
+          "finding": "The fictional note describes one important integration with no tested fallback."
+        }
+      ],
+      "open_questions": [
+        "Has the fallback for the critical integration been tested under production-like conditions?"
+      ]
+    },
+    {
+      "id": "risk_profile",
+      "name": "Risk profile",
+      "weight": 25,
+      "evidence": [
+        {
+          "id": "RSK-01",
+          "source": "Synthetic control assessment",
+          "source_type": "fictional control assessment",
+          "observed_at": "2026-09-17T13:20:00Z",
+          "confidence": 0.75,
+          "stance": "supports",
+          "score": 68,
+          "finding": "The fictional assessment describes documented access controls and incident procedures."
+        },
+        {
+          "id": "RSK-02",
+          "source": "Synthetic legal diligence checklist",
+          "source_type": "fictional diligence checklist",
+          "observed_at": "2026-09-23T16:10:00Z",
+          "confidence": 0.45,
+          "stance": "concerns",
+          "score": 42,
+          "finding": "The fictional checklist marks intellectual-property assignment records as incomplete."
+        }
+      ],
+      "open_questions": [
+        "Are all material intellectual-property assignments complete and enforceable?",
+        "Have the incident-response procedures been exercised recently?"
+      ]
+    }
+  ]
+}
