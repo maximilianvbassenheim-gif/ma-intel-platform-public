@@ -8,14 +8,14 @@
     "views": 620,
     "downloads": 140,
     "last_activity_date": "2026-08-13T20:00:00Z",
-    "score": 89.61,
+    "score": 65.0,
     "breakdown": {
       "stars_norm": 30.0,
       "forks_norm": 15.0,
-      "recent_activity_norm": 24.61,
+      "recent_activity_norm": 0.0,
       "engagement_norm": 20.0,
       "stale_penalty": 0.0,
-      "total_score": 89.61
+      "total_score": 65.0
     }
   },
   {
@@ -27,14 +27,14 @@
     "views": 350,
     "downloads": 85,
     "last_activity_date": "2026-08-14T01:00:00Z",
-    "score": 76.49,
+    "score": 51.5,
     "breakdown": {
       "stars_norm": 27.0,
       "forks_norm": 9.0,
-      "recent_activity_norm": 24.99,
+      "recent_activity_norm": 0.0,
       "engagement_norm": 15.5,
       "stale_penalty": 0.0,
-      "total_score": 76.49
+      "total_score": 51.5
     }
   },
   {
@@ -46,14 +46,14 @@
     "views": 290,
     "downloads": 70,
     "last_activity_date": "2026-08-14T02:00:00Z",
-    "score": 66.66,
+    "score": 41.6,
     "breakdown": {
       "stars_norm": 22.8,
       "forks_norm": 6.0,
-      "recent_activity_norm": 25.06,
+      "recent_activity_norm": 0.0,
       "engagement_norm": 12.8,
       "stale_penalty": 0.0,
-      "total_score": 66.66
+      "total_score": 41.6
     }
   },
   {
