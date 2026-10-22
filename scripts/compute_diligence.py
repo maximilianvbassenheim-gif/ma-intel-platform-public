@@ -93,8 +93,13 @@ def score_case(case: dict, source_sha256: str, generated_at: str) -> dict:
             "input_sha256": source_sha256,
             "scoring_method": (
                 "Each criterion is the confidence-weighted mean of its evidence scores "
-                "(0-100); the overall score is weighted by criterion weight. "
-                "Confidence coverage includes all criteria, including those without evidence."
+                "(0-100); the overall score is the criterion-weighted mean of criteria "
+                "with evidence. Confidence coverage includes all criteria, including "
+                "those without evidence; status is preliminary below 70% coverage."
+            ),
+            "source_authenticity": (
+                "The SHA-256 identifies this input dataset only. Referenced sources and "
+                "findings are fictional and are not independently verified."
             ),
         },
         "overall_score": round(overall_score, 2) if overall_score is not None else None,
@@ -160,6 +165,7 @@ def render_markdown(report: dict) -> str:
             f"- Input: `{report['provenance']['input_file']}`",
             f"- SHA-256: `{report['provenance']['input_sha256']}`",
             f"- Scoring: {report['provenance']['scoring_method']}",
+            f"- Source authenticity: {report['provenance']['source_authenticity']}",
             "",
             report["notice"],
             "",

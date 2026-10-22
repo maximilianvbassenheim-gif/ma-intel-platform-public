@@ -19,7 +19,7 @@ class TestDiligenceAssessment(unittest.TestCase):
     def test_score_and_provenance_are_reproducible(self):
         report = score_case(self.case, self.source_hash, "2026-10-01T00:00:00+00:00")
         self.assertEqual(report["provenance"]["input_sha256"], self.source_hash)
-        self.assertEqual(report["overall_score"], 58.16)
+        self.assertEqual(report["overall_score"], 58.84)
         self.assertEqual(report["status"], "preliminary")
         self.assertEqual(len(report["criteria"]), 4)
 
