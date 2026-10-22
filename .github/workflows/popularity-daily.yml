@@ -8,6 +8,8 @@ on:
 jobs:
   filter-and-report:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -25,9 +27,15 @@ jobs:
           pytest tests/
 
       - name: Commit & Push Daily Report
+        if: github.ref == 'refs/heads/main'
         run: |
+          git add -- reports/DEMO_popular_today.md reports/DEMO_popular_today.json
+          if git diff --cached --quiet -- reports/DEMO_popular_today.md reports/DEMO_popular_today.json; then
+            echo "Daily reports unchanged; skipping commit and push."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/
-          git diff --quiet && git diff --staged --quiet || git commit -m "chore(report): update daily popular items [skip ci]"
+          git commit -m "chore(report): update daily popular items [skip ci]" -- reports/DEMO_popular_today.md reports/DEMO_popular_today.json
           git push origin main
