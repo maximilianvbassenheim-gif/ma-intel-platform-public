@@ -2,7 +2,7 @@
 
 # 🌟 Popular Today — Top Inhalte & Artefakte
 
-**Erstellt am**: 2026-10-23 11:10:40 UTC
+**Erstellt am**: 2026-10-24 10:28:14 UTC
 **Filter-Kriterium**: `popularity_score >= 70.0`
 
 | Rang | Titel | Kategorie | Score | Sterne | Forks | Aufrufe | Letzte Aktivität |
