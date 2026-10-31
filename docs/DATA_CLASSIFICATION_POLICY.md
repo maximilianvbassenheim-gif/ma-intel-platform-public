@@ -37,5 +37,5 @@ Die Datenverarbeitung innerhalb der **MA Intel Platform** unterliegt einer strik
 
 ## Durchsetzungsregeln (Enforcement)
 1. **Default Deny**: Jede unklassifizierte Datei wird automatisch als `🔴 RESTRICTED` eingestuft.
-2. **Gatekeeper-Prüfung**: `scripts/preflight_classification.py` blockiert vor jedem Push / Export sensible Pfade.
+2. **Gatekeeper-Prüfung**: `scripts/preflight_classification.py` blockiert gestagte sensible Pfade vor dem Commit. In CI scannt derselbe Guard mit `--scan-tree` (oder `PREFLIGHT_SCAN_TREE=1`) den gesamten Arbeitsbaum, ohne dass Dateien gestagt sein müssen.
 3. **Chain-of-Custody**: Jeder Datenimport erfordert einen Eintrag in `evidence/chain_of_custody.log`.
